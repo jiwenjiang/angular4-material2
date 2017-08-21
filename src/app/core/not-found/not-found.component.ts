@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-// import {notfind} from './notPage.server.js';
+
 
 @Component({
   selector: 'app-not-found',
@@ -12,7 +12,6 @@ export class NotFoundComponent implements OnInit {
   }
 
   ngOnInit() {
-    // notfind();
   }
 
 }

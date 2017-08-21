@@ -9,8 +9,8 @@ let canvas = function () {
   window.onresize = resize;
 
   function resize() {
-    canvas.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    canvas.width = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth)-10;
+    canvas.height = (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight)-10;
   }
 
   var RAF = (function() {
