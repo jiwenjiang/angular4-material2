@@ -2,121 +2,121 @@
  * Created by j_bleach on 2017/8/20.
  */
 let canvas = function () {
-  var canvas = document.getElementById("cas");
-  var ctx = canvas.getContext("2d");
+  (function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+      window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+      window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
+        || window[vendors[x]+'CancelRequestAnimationFrame'];
+    }
 
-  resize();
-  window.onresize = resize;
-
-  function resize() {
-    canvas.width = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth)-10;
-    canvas.height = (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight)-10;
-  }
-
-  var RAF = (function() {
-    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
-        window.setTimeout(callback, 1000 / 60);
+    if (!window.requestAnimationFrame)
+      window.requestAnimationFrame = function(callback, element) {
+        var currTime = new Date().getTime();
+        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+        var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+          timeToCall);
+        lastTime = currTime + timeToCall;
+        return id;
       };
-  })();
 
-  // 鼠标活动时，获取鼠标坐标
-  var warea = {x: null, y: null, max: 20000};
-  window.onmousemove = function(e) {
-    e = e || window.event;
+    if (!window.cancelAnimationFrame)
+      window.cancelAnimationFrame = function(id) {
+        clearTimeout(id);
+      };
+  }());
+  (function() {
 
-    warea.x = e.clientX;
-    warea.y = e.clientY;
-  };
-  window.onmouseout = function(e) {
-    warea.x = null;
-    warea.y = null;
-  };
+    var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
 
-  // 添加粒子
-  // x，y为粒子坐标，xa, ya为粒子xy轴加速度，max为连线的最大距离
-  var dots = [];
-  for (var i = 0; i < 300; i++) {
-    var x = Math.random() * canvas.width;
-    var y = Math.random() * canvas.height;
-    var xa = Math.random() * 2 - 1;
-    var ya = Math.random() * 2 - 1;
+    // Main
+    initHeader();
+    addListeners();
 
-    dots.push({
-      x: x,
-      y: y,
-      xa: xa,
-      ya: ya,
-      max: 6000
-    })
-  }
+    function initHeader() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      target = {x: 0, y: height};
 
-  // 延迟100秒开始执行动画，如果立即执行有时位置计算会出错
-  setTimeout(function() {
-    animate();
-  }, 100);
+      largeHeader = document.getElementById('large-header');
+      largeHeader.style.height = height+'px';
 
-  // 每一帧循环的逻辑
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+      canvas = document.getElementById('demo-canvas');
+      canvas.width = width;
+      canvas.height = height;
+      ctx = canvas.getContext('2d');
 
-    // 将鼠标坐标添加进去，产生一个用于比对距离的点数组
-    var ndots = [warea].concat(dots);
+      // create particles
+      circles = [];
+      for(var x = 0; x < width*0.5; x++) {
+        var c = new Circle();
+        circles.push(c);
+      }
+      animate();
+    }
 
-    dots.forEach(function(dot) {
+    // Event handling
+    function addListeners() {
+      window.addEventListener('scroll', scrollCheck);
+      window.addEventListener('resize', resize);
+    }
 
-      // 粒子位移
-      dot.x += dot.xa;
-      dot.y += dot.ya;
+    function scrollCheck() {
+      if(document.body.scrollTop > height) animateHeader = false;
+      else animateHeader = true;
+    }
 
-      // 遇到边界将加速度反向
-      dot.xa *= (dot.x > canvas.width || dot.x < 0) ? -1 : 1;
-      dot.ya *= (dot.y > canvas.height || dot.y < 0) ? -1 : 1;
+    function resize() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      largeHeader.style.height = height+'px';
+      canvas.width = width;
+      canvas.height = height;
+    }
 
-      // 绘制点
-      ctx.fillRect(dot.x - 0.5, dot.y - 0.5, 1, 1);
-
-      // 循环比对粒子间的距离
-      for (var i = 0; i < ndots.length; i++) {
-        var d2 = ndots[i];
-
-        if (dot === d2 || d2.x === null || d2.y === null) continue;
-
-        var xc = dot.x - d2.x;
-        var yc = dot.y - d2.y;
-
-        // 两个粒子之间的距离
-        var dis = xc * xc + yc * yc;
-
-        // 距离比
-        var ratio;
-
-        // 如果两个粒子之间的距离小于粒子对象的max值，则在两个粒子间画线
-        if (dis < d2.max) {
-
-          // 如果是鼠标，则让粒子向鼠标的位置移动
-          if (d2 === warea && dis > (d2.max / 2)) {
-            dot.x -= xc * 0.03;
-            dot.y -= yc * 0.03;
-          }
-
-          // 计算距离比
-          ratio = (d2.max - dis) / d2.max;
-
-          // 画线
-          ctx.beginPath();
-          ctx.lineWidth = ratio / 2;
-          ctx.strokeStyle = 'rgba(0,0,0,' + (ratio + 0.2) + ')';
-          ctx.moveTo(dot.x, dot.y);
-          ctx.lineTo(d2.x, d2.y);
-          ctx.stroke();
+    function animate() {
+      if(animateHeader) {
+        ctx.clearRect(0,0,width,height);
+        for(var i in circles) {
+          circles[i].draw();
         }
       }
+      requestAnimationFrame(animate);
+    }
 
-      // 将已经计算过的粒子从数组中删除
-      ndots.splice(ndots.indexOf(dot), 1);
-    });
+    // Canvas manipulation
+    function Circle() {
+      var _this = this;
 
-    RAF(animate);
-  }
+      // constructor
+      (function() {
+        _this.pos = {};
+        init();
+        console.log(_this);
+      })();
+
+      function init() {
+        _this.pos.x = Math.random()*width;
+        _this.pos.y = height+Math.random()*100;
+        _this.alpha = 0.1+Math.random()*0.3;
+        _this.scale = 0.1+Math.random()*0.3;
+        _this.velocity = Math.random();
+      }
+
+      this.draw = function() {
+        if(_this.alpha <= 0) {
+          init();
+        }
+        _this.pos.y -= _this.velocity;
+        _this.alpha -= 0.0005;
+        ctx.beginPath();
+        ctx.arc(_this.pos.x, _this.pos.y, _this.scale*10, 0, 2 * Math.PI, false);
+        ctx.fillStyle = 'rgba(255,255,255,'+ _this.alpha+')';
+        ctx.fill();
+      };
+    }
+
+  })();
 }
 export {canvas}
