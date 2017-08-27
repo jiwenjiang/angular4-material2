@@ -1,20 +1,44 @@
 import {Component, OnInit} from '@angular/core';
 import {canvas} from './loginCanvas.server.js';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.less']
+  styleUrls: ['./login.component.less'],
+  animations: [
+    trigger('flyInOut', [
+      state('in', style({transform: 'translateX(0)'})),
+      transition('void => *', [
+        style({opacity: 0, transform: 'translateX(-100%)'}),
+        animate('0.4s 100ms ease-out')
+      ]),
+      // transition('* => void', [
+      //   style({transform: 'translateX(100%)'}),
+      //   animate('1s 0.4s ease-out')
+      // ])
+    ])
+  ]
 })
 export class LoginComponent implements OnInit {
-  hide: boolean;
+  toLogin: boolean;
 
   constructor() {
     // console.log(canvas);
-    this.hide = true;
   }
 
   ngOnInit() {
+    this.toLogin = true;
     canvas();
+  }
+
+  showLogin() {
+    this.toLogin = false;
   }
 }

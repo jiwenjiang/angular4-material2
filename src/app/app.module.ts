@@ -13,13 +13,15 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {LoginComponent} from './core/login/login.component';
 import {NotFoundComponent} from './core/not-found/not-found.component';
 import {StonesComponent} from './stones/stones.component';
+import { LoginFormComponent } from './core/login/login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NotFoundComponent,
-    StonesComponent
+    StonesComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,

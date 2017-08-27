@@ -2,11 +2,11 @@
   <div class="content">
     <div id="large-header" class="large-header">
       <canvas id="demo-canvas"></canvas>
-      <h1 class="main-title">
+      <h1 class="main-title" (dblclick)="showLogin()" *ngIf="toLogin">
         <ul class="demo-3">
           <li>
             <figure>
-              <img src="../../../assets/img/button.png" alt="">
+              <img src="../../../assets/img/button.png" alt="" [@flyInOut]>
               <figcaption>
                 <h2>dbClick Me To Login</h2>
                 <p>This is a stinky legend as the theme of the angular4 project.</p>
@@ -16,6 +16,9 @@
         </ul>
         <!--<span >Spirit</span>-->
       </h1>
+      <app-login-form class="main-title" *ngIf="!toLogin" ></app-login-form>
     </div>
+
+
   </div>
 </div>
