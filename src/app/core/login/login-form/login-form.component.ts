@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
+
 import {
   trigger,
   state,
@@ -7,7 +9,10 @@ import {
   group,
   transition
 } from '@angular/animations';
-
+interface User {
+  name: string;
+  password: string;
+}
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -41,11 +46,22 @@ import {
     ])
   ]
 })
-export class LoginFormComponent implements OnInit {
 
-  constructor() { }
+export class LoginFormComponent implements OnInit {
+  user: User;
+
+  constructor() {
+    this.user = {
+      name: '',
+      password: ''
+    };
+  }
 
   ngOnInit() {
+  }
+
+  submit() {
+    console.log(this.user);
   }
 
 }

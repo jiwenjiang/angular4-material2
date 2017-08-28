@@ -1,16 +1,16 @@
 <div class="loginForm"
      fxLayout="column"
-     fxLayoutAlign="center" >
+     fxLayoutAlign="center">
   <!--<div fxFlex="50"></div>-->
   <div fxFlex="50" class="black" [@flyInOut]>
     <h2>Login</h2>
     <md-input-container class="example-full-width" >
-      <input mdInput placeholder="username">
+      <input mdInput placeholder="username" [(ngModel)]="user.name">
     </md-input-container>
-    <md-input-container class="example-full-width" >
-      <input mdInput placeholder="password">
+    <md-input-container class="example-full-width">
+      <input mdInput placeholder="password" [(ngModel)]="user.password">
     </md-input-container>
-    <button md-raised-button class="background-primary-color" >GOGOGOGOGOGOGO</button>
+    <button md-raised-button class="background-primary-color" (click)="submit()">GOGOGOGOGOGOGO</button>
   </div>
 
 </div>
