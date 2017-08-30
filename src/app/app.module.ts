@@ -10,11 +10,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
-
-
 import {LoginComponent} from './core/login/login.component';
 import {NotFoundComponent} from './core/not-found/not-found.component';
-import {StonesComponent} from './stones/stones.component';
+import {HeroesModule} from './stones/stones.module';
 import {LoginFormComponent} from './core/login/login-form/login-form.component';
 
 @NgModule({
@@ -22,7 +20,7 @@ import {LoginFormComponent} from './core/login/login-form/login-form.component';
     AppComponent,
     LoginComponent,
     NotFoundComponent,
-    StonesComponent,
+    HeroesModule,
     LoginFormComponent
   ],
   imports: [
@@ -31,7 +29,7 @@ import {LoginFormComponent} from './core/login/login-form/login-form.component';
     MaterialModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

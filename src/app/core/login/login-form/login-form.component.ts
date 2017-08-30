@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-
+import {NotyService} from '../../../service/noty/noty.service';
 
 import {
   trigger,
@@ -9,6 +9,7 @@ import {
   group,
   transition
 } from '@angular/animations';
+
 interface User {
   name: string;
   password: string;
@@ -44,13 +45,14 @@ interface User {
         ])
       ])
     ])
-  ]
+  ],
+  providers: []
 })
 
 export class LoginFormComponent implements OnInit {
   user: User;
 
-  constructor() {
+  constructor(private noty: NotyService) {
     this.user = {
       name: '',
       password: ''
@@ -62,6 +64,9 @@ export class LoginFormComponent implements OnInit {
 
   submit() {
     console.log(this.user);
+    this.noty.alert({
+      text: 'Notification 222'
+    });
   }
 
 }
