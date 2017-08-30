@@ -46,7 +46,7 @@ interface User {
       ])
     ])
   ],
-  providers: []
+  providers: [NotyService]
 })
 
 export class LoginFormComponent implements OnInit {
@@ -65,7 +65,7 @@ export class LoginFormComponent implements OnInit {
   submit() {
     console.log(this.user);
     this.noty.alert({
-      text: 'Notification 222'
+      text: '👻👻👻👻👻👻👻👻'
     });
   }
 
