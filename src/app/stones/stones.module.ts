@@ -2,20 +2,28 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-import {stonesRoutingModule} from './stones-routing.module';
-
+import {StonesRoutingModule} from './stones-routing.module';
+import {StonesComponent} from './stones.component';
+import {MaterialModule} from '@angular/material';
+import { StonesTopComponent } from './stones-top/stones-top.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    stonesRoutingModule,
-    ReactiveFormsModule
+    StonesRoutingModule,
+    ReactiveFormsModule,
+    MaterialModule
   ],
-  declarations: [],
-  entryComponents: [],
+  declarations: [
+    StonesComponent,
+    StonesTopComponent
+  ],
+  entryComponents: [
+    StonesComponent
+  ],
   providers: []
 })
 
-export class HeroesModule {
+export class StonesModule {
 }
