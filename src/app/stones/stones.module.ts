@@ -5,7 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {StonesRoutingModule} from './stones-routing.module';
 import {StonesComponent} from './stones.component';
 import {MaterialModule} from '@angular/material';
-import { StonesTopComponent } from './stones-top/stones-top.component';
+import {StonesTopComponent} from './stones-top/stones-top.component';
 
 @NgModule({
   imports: [
