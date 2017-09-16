@@ -6,11 +6,13 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./stones-top.component.less']
 })
 export class StonesTopComponent implements OnInit {
+  userName: string;
 
   constructor() {
   }
 
   ngOnInit() {
+    this.userName = JSON.parse(sessionStorage.getItem('user')).name;
   }
 
 }
