@@ -4,13 +4,15 @@
   <!--<div fxFlex="50"></div>-->
   <div fxFlex="50" class="black" [@flyInOut]>
     <h2>{{ 'Login' | translate }}</h2>
-    <md-input-container class="example-full-width">
-      <input mdInput placeholder="username" [(ngModel)]="user.name">
-    </md-input-container>
-    <md-input-container class="example-full-width">
-      <input mdInput placeholder="password" [(ngModel)]="user.password">
-    </md-input-container>
-    <button md-raised-button class="background-primary-color" (click)="submit()">GOGOGOGOGOGOGO</button>
+    <form (ngSubmit)="submit()" #loginForm="ngForm">
+      <md-input-container class="example-full-width">
+        <input mdInput placeholder="username" [(ngModel)]="user.name" name="name" required>
+      </md-input-container>
+      <md-input-container class="example-full-width">
+        <input mdInput placeholder="password" [(ngModel)]="user.password" name="password" required>
+      </md-input-container>
+      <button md-raised-button class="background-primary-color" [disabled]="!loginForm.form.valid" type="submit">GOGOGOGOGOGOGO</button>
+    </form>
   </div>
 
 </div>

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NotyService} from '../../../service/noty/noty.service';
+import {Router} from '@angular/router';
 
 import {
   trigger,
@@ -52,7 +53,7 @@ interface User {
 export class LoginFormComponent implements OnInit {
   user: User;
 
-  constructor(private noty: NotyService) {
+  constructor(private noty: NotyService, private route: Router) {
     this.user = {
       name: '',
       password: ''
@@ -65,8 +66,10 @@ export class LoginFormComponent implements OnInit {
   submit() {
     console.log(this.user);
     this.noty.alert({
-      text: '👻👻👻👻👻👻👻👻'
+      text: '👻👻👻👻welcome!👻👻👻👻'
     });
+    sessionStorage.setItem('user', JSON.stringify(this.user));
+    this.route.navigate(['/stones']);
   }
 
 }
