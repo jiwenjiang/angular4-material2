@@ -1,19 +1,18 @@
-<app-stones-top></app-stones-top>
+<app-stones-top [sidenav]="sidenav"></app-stones-top>
 <div class="ribbon">
-  <a href="https://github.com/jiwenjiang/ng4-material2">Fork me on GitHub</a>
+  <a href="https://github.com/jiwenjiang/ng4-material2" target="_blank">Fork me on GitHub</a>
 </div>
 <md-sidenav-container class="stones-container">
   <md-sidenav #sidenav class="example-sidenav">
-   <p>dd</p>
-   <p>dd</p>
-   <p>dd</p>
-   <p>dd</p>
+    <ul class="top">
+      <li>炉石卡组</li>
+      <li>九大职业</li>
+      <li>精彩视频</li>
+    </ul>
   </md-sidenav>
-
   <div class="example-sidenav-content">
-    ggggg
-    <button type="button" md-button (click)="sidenav.open()">
-      Open sidenav
-    </button>
+    <div class="sidenav-container">
+      {{ 'working' | translate}}
+    </div>
   </div>
 </md-sidenav-container>

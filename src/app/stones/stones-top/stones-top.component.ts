@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-stones-top',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stones-top.component.less']
 })
 export class StonesTopComponent implements OnInit {
+  @Input() sidenav;
+  username: string;
 
-  constructor() { }
+  constructor(private translate: TranslateService) {
+  }
 
   ngOnInit() {
+    this.username = JSON.parse(sessionStorage.getItem('user')).name;
+  }
+
+  toggleSide() {
+    this.sidenav.open();
+  }
+
+  conso() {
+    this.translate.use('en');
+    console.log(this.translate.getBrowserLang());
   }
 
 }

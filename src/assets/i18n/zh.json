@@ -1,3 +1,6 @@
 {
-  "Login": "登录"
+  "Login": "登录",
+  "username": "用户名",
+  "password": "密码",
+  "working":"拼命开发中~"
 }

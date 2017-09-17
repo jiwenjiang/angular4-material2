@@ -1,3 +1,6 @@
 {
-  "Login": "Login"
+  "Login": "Login",
+  "username": "username",
+  "password": "password",
+  "working":"working"
 }

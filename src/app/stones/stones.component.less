@@ -1,22 +1,27 @@
 .stones-container {
   width: 100%;
   height: 100%;
-
+  position: relative;
 }
 
 .example-sidenav-content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8em;
-  background-color: rgba(173,216,230,0.2)
 
+  height: 100%;
+  font-size: 1.8em;
+  background-color: rgba(173, 216, 230, 0.2);
+}
+
+.sidenav-container {
+  padding-top: 2em;
 }
 
 .example-sidenav {
   padding: 20px;
+  .top {
+    margin-top: 2.6em;
+  }
 }
+
 .ribbon {
   z-index: 11;
   background-color: black;
@@ -37,6 +42,7 @@
   -moz-box-shadow: 0 0 10px #888;
   box-shadow: 0 0 10px #888;
 }
+
 .ribbon a {
   border: 1px solid #ffffff;
   color: #fff;
