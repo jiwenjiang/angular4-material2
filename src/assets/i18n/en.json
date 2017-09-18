@@ -1,3 +1,10 @@
 {
-  "Login": "Login"
+  "Login": "Login",
+  "username": "username",
+  "password": "password",
+  "stones": {
+    "working": "working"
+  },
+  "chinese": "chinese",
+  "english": "english"
 }

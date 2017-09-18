@@ -19,10 +19,6 @@ import {
         style({opacity: 0, transform: 'translateX(-100%)'}),
         animate('0.4s 100ms ease-out')
       ]),
-      // transition('* => void', [
-      //   style({transform: 'translateX(100%)'}),
-      //   animate('1s 0.4s ease-out')
-      // ])
     ])
   ]
 })
@@ -30,7 +26,6 @@ export class LoginComponent implements OnInit {
   toLogin: boolean;
 
   constructor() {
-    // console.log(canvas);
   }
 
   ngOnInit() {

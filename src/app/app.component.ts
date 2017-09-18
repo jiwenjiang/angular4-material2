@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.translateService.addLangs(['zh', 'en']);
+    console.log('进入app');
     this.translateService.setDefaultLang('zh');
     const browserLang = this.translateService.getBrowserLang();
     this.translateService.use(browserLang.match(/zh|en/) ? browserLang : 'zh');

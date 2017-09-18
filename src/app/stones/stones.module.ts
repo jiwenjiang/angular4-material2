@@ -1,19 +1,14 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {StonesRoutingModule} from './stones-routing.module';
 import {StonesComponent} from './stones.component';
-import {MaterialModule} from '@angular/material';
 import {StonesTopComponent} from './stones-top/stones-top.component';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
     StonesRoutingModule,
-    ReactiveFormsModule,
-    MaterialModule
+    SharedModule
   ],
   declarations: [
     StonesComponent,
