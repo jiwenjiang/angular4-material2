@@ -5,14 +5,14 @@
 <md-sidenav-container class="stones-container">
   <md-sidenav #sidenav class="example-sidenav sideNavWidth">
     <ul class="top">
-      <li>炉石卡组</li>
-      <li>九大职业</li>
-      <li>精彩视频</li>
+      <li class="nav-active" *ngFor="let v of menus;let i = index;" [class.nav-active]="i==curItem"
+          (click)="changeNav(i)">{{v.text}}
+      </li>
     </ul>
   </md-sidenav>
   <div class="example-sidenav-content">
     <div class="sidenav-container">
-      {{ 'stones.working' | translate}}
+      <router-outlet></router-outlet>
     </div>
   </div>
 </md-sidenav-container>
