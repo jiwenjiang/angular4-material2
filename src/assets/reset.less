@@ -28,22 +28,39 @@ html, body {
   height: 100%;
   font-family: PingFangSC-Semibold;
 }
-
 @media screen and (min-width: 1200px) {
   body {
     font-size: 16px;
+    .sideNavWidth {
+      width: 12%;
+    }
   }
 }
 
 @media screen and (min-width: 960px) and (max-width: 1199px) {
   body {
     font-size: 14px;
+    .sideNavWidth {
+      width: 18%;
+    }
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
   body {
     font-size: 12px;
+    .sideNavWidth {
+      width: 20%;
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  body {
+    font-size: 12px;
+    .sideNavWidth {
+      width: 33%;
+    }
   }
 }
 
@@ -66,25 +83,22 @@ table {
 }
 
 /*自定义浏览器滚动条样式*/
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
   width: 8px;
   height: 8px;
   background-color: #F5F5F5;
 }
 
 /*定义滚动条轨道 内阴影+圆角*/
-::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   background-color: #EBF3F6;
 }
 
 /*定义滑块 内阴影+圆角*/
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
   background-color: #37708E;
 }
