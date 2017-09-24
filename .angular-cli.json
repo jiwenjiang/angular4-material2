@@ -21,7 +21,7 @@
       "styles": [
         "styles.less",
         "./assets/enterAnimate.less",
-        "./assets/reset.css"
+        "./assets/reset.less"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

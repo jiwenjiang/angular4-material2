@@ -2,7 +2,10 @@
   "Login": "登录",
   "username": "用户名",
   "password": "密码",
-  "working": "拼命开发中~",
+  "404": "你的页面飞走了~",
+  "stones": {
+    "working": "拼命开发中~"
+  },
   "chinese": "中文",
   "english": "英文"
 }

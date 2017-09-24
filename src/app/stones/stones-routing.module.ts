@@ -1,24 +1,18 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {StonesComponent} from './stones.component';
+import {StonesCardsComponent} from './stones-cards/stones-cards.component';
 
 const stonesRoutes: Routes = [
   {
     path: '',
-    component: StonesComponent
-    // children: [
-    //   {
-    //     path: '',
-    //     component: HeroListComponent,
-    //     // children: [
-    //     //     {
-    //     //         path: '',
-    //     //         component: HeroTestComponent
-    //     //     }
-    //     // ]
-    //   },
-    //   {path: ':id', component: HeroDetailComponent}
-    // ]
+    component: StonesComponent,
+    children: [
+      {
+        path: '',
+        component: StonesCardsComponent,
+      }
+    ]
   }
 ];
 

@@ -2,7 +2,10 @@
   "Login": "Login",
   "username": "username",
   "password": "password",
-  "working": "working",
+  "404": "404.not found Page",
+  "stones": {
+    "working": "working"
+  },
   "chinese": "chinese",
   "english": "english"
 }

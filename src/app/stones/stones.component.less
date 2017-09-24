@@ -5,10 +5,12 @@
 }
 
 .example-sidenav-content {
-
   height: 100%;
   font-size: 1.8em;
   background-color: rgba(173, 216, 230, 0.2);
+  position: relative;
+  background: url('../../assets/img/bgimg.jpg') no-repeat 50% 0 fixed;
+  background-size:cover;
 }
 
 .sidenav-container {
@@ -16,15 +18,43 @@
 }
 
 .example-sidenav {
-  padding: 20px;
+  padding: 16px 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-shadow: 0 5px 18px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   .top {
     margin-top: 2.6em;
+    background-color: #031D2E;
   }
+  ul {
+
+    background-color: #031D2E;
+    height: 100%;
+
+  }
+  li {
+    background-color: #031D2E;
+    color: white;
+    height: 2.8em;
+    line-height: 2.8em;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      background-color: #031D1D;
+    }
+  }
+
+  .nav-active, .nav-active:hover {
+    background-color: #031D1D;
+    box-shadow: inset -3px 3px 7px #EBF3F6, inset 3px 3px 7px #EBF3F6,inset -3px -3px 7px #EBF3F6;
+  }
+
 }
 
 .ribbon {
   z-index: 11;
-  background-color: black;
+  background-color: #031D2E;
   overflow: hidden;
   white-space: nowrap;
   /* top left corner */

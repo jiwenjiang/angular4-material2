@@ -7,6 +7,7 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./stones-top.component.less']
 })
 export class StonesTopComponent implements OnInit {
+
   @Input() sidenav;
   username: string;
   langImg: any;
@@ -35,7 +36,6 @@ export class StonesTopComponent implements OnInit {
     this.translate.use(lang).subscribe(() => {
       this.chooseLang(lang);
     });
-    // console.log(this.translate.getBrowserLang());
   }
 
 }
