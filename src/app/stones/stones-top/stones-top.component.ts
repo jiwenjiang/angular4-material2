@@ -1,16 +1,18 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, OnDestroy} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import {ISubscription} from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-stones-top',
   templateUrl: './stones-top.component.html',
   styleUrls: ['./stones-top.component.less']
 })
-export class StonesTopComponent implements OnInit {
+export class StonesTopComponent implements OnInit, OnDestroy {
 
   @Input() sidenav;
   username: string;
   langImg: any;
+  private subscription;
 
   constructor(private translate: TranslateService) {
   }
@@ -33,9 +35,13 @@ export class StonesTopComponent implements OnInit {
   }
 
   changeLang(lang) {
-    this.translate.use(lang).subscribe(() => {
+    this.subscription = this.translate.use(lang).subscribe(() => {
       this.chooseLang(lang);
     });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 }

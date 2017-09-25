@@ -1,12 +1,24 @@
-import {trigger, animate, transition, style} from '@angular/animations';
+import { animate, AnimationEntryMetadata, state, style, transition, trigger } from '@angular/core';
 
-export const fadeInAnimation =
-  trigger('fadeInAnimation', [
+export const slideInDownAnimation: AnimationEntryMetadata =
+  trigger('routeAnimation', [
+    state('*',
+      style({
+        opacity: 1,
+        transform: 'translateX(0)'
+      })
+    ),
     transition(':enter', [
-      style({opacity: 0}),
-      animate('2000ms', style({opacity: 1}))
+      style({
+        opacity: 0,
+        transform: 'translateX(-100%)'
+      }),
+      animate('0.2s ease-in')
     ]),
     transition(':leave', [
-      animate('2000ms', style({opacity: 0}))
+      animate('0.5s ease-out', style({
+        opacity: 0,
+        transform: 'translateY(100%)'
+      }))
     ])
   ]);

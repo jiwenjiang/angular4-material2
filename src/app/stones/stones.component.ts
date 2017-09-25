@@ -1,9 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, HostBinding} from '@angular/core';
+
+// import {slideInDownAnimation} from '../animations';
 
 @Component({
   selector: 'app-stones',
   templateUrl: './stones.component.html',
-  styleUrls: ['./stones.component.less']
+  styleUrls: ['./stones.component.less'],
+  // animations: [slideInDownAnimation]
 })
 export class StonesComponent implements OnInit {
   menus: [{ text: string, id: number }];
@@ -31,5 +34,4 @@ export class StonesComponent implements OnInit {
   changeNav(i) {
     this.curItem = i;
   }
-
 }
