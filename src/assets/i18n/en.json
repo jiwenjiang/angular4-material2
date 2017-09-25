@@ -2,6 +2,7 @@
   "Login": "Login",
   "username": "username",
   "password": "password",
+  "404": "404.not found Page",
   "stones": {
     "working": "working"
   },
