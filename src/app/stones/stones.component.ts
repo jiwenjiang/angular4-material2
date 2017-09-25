@@ -1,14 +1,17 @@
 import {Component, OnInit, HostBinding} from '@angular/core';
-
-// import {slideInDownAnimation} from '../animations';
+import {ActivatedRoute} from '@angular/router';
+import {routeAnimation} from '../animations';
 
 @Component({
   selector: 'app-stones',
   templateUrl: './stones.component.html',
   styleUrls: ['./stones.component.less'],
-  // animations: [slideInDownAnimation]
+  animations: [routeAnimation]
 })
 export class StonesComponent implements OnInit {
+  @HostBinding('@routeAnimation') routeAnimation = true;
+  @HostBinding('style.display')   display = 'block';
+  @HostBinding('style.position')  position = 'absolute';
   menus: [{ text: string, id: number }];
   curItem: number;
 
@@ -33,5 +36,10 @@ export class StonesComponent implements OnInit {
 
   changeNav(i) {
     this.curItem = i;
+  }
+
+  getState(outlet) {
+    console.log(outlet);
+    return outlet.activatedRouteData.state;
   }
 }
