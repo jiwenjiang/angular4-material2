@@ -1,6 +1,6 @@
 import {Component, OnInit, HostBinding} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {routeAnimation} from '../animations';
+// import {ActivatedRoute} from '@angular/router';
+import {routeAnimation} from '../animations/animations';
 
 @Component({
   selector: 'app-stones',
