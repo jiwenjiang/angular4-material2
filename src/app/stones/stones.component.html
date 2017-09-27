@@ -5,10 +5,20 @@
 <md-sidenav-container class="stones-container">
   <md-sidenav #sidenav class="example-sidenav sideNavWidth">
     <ul class="top">
-      <li class="nav-active" *ngFor="let v of menus;let i = index;" [class.nav-active]="i==curItem"
-          (click)="changeNav(i)">{{v.text}}
-      </li>
+      <!--<li class="nav-active" *ngFor="let v of menus;let i = index;" [class.nav-active]="i==curItem"-->
+          <!--(click)="changeNav(i)">-->
+        <!--{{v.text}}-->
+      <!--</li>-->
+      <md-nav-list>
+        <md-list-item *ngFor="let link of menus;let i = index;" [class.nav-active]="i==curItem" (click)="changeNav(i)">
+          <a mdLine >{{ link.text }}</a>
+          <!--<button md-icon-button >-->
+            <!--<md-icon>info</md-icon>-->
+          <!--</button>-->
+        </md-list-item>
+      </md-nav-list>
     </ul>
+
   </md-sidenav>
   <div class="example-sidenav-content">
     <div class="sidenav-container" >
