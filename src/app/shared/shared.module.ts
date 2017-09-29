@@ -7,7 +7,6 @@ import {FormsModule} from '@angular/forms';
 import {TranslateModule} from '@ngx-translate/core';
 import {NotyService} from '../service/noty/noty.service';
 import {MaterialModule} from '@angular/material';
-
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({

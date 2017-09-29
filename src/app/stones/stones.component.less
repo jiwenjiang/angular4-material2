@@ -1,3 +1,6 @@
+@bgcolor: rgba(0, 17, 27, 1);
+@activeColor:rgb(0, 90, 171);
+
 .stones-container {
   width: 100%;
   height: 100%;
@@ -11,7 +14,7 @@
   background-color: rgba(173, 216, 230, 0.2);
   position: relative;
   background: url('../../assets/img/bgimg.jpg') no-repeat 50% 0 fixed;
-  background-size:cover;
+  background-size: cover;
 }
 
 .sidenav-container {
@@ -26,11 +29,11 @@
   overflow-y: hidden;
   box-shadow: 0 5px 18px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   .top {
-    margin-top: 2.6em;
-    background-color: #031D2E;
+    margin-top: 1.9em;
+    background-color: @bgcolor;
   }
-  md-list-item{
-    background-color: #031D2E;
+  md-list-item {
+    background-color: @bgcolor;
     color: white;
     height: 2.8em;
     line-height: 2.8em;
@@ -38,31 +41,31 @@
     text-align: center;
     cursor: pointer;
     &:hover {
-      background-color: rgba(0,17,27,1);
+      background-color: @activeColor;
     }
   }
   ul {
 
-    background-color: #031D2E;
+    background-color: @bgcolor;
     height: 100%;
-
   }
   li {
-    background-color: #031D2E;
+    background-color: @bgcolor;
     color: white;
     height: 2.8em;
     line-height: 2.8em;
     display: block;
     text-align: center;
     cursor: pointer;
+    font-size: 1.6em;
     &:hover {
-      background-color: rgba(0,17,27,1);
+      background-color: @activeColor;
     }
   }
 
   .nav-active, .nav-active:hover {
-    background-color: rgba(0,17,27,1);
-    box-shadow: inset -3px 3px 7px #EBF3F6, inset 3px 3px 7px #EBF3F6,inset -3px -3px 7px #EBF3F6;
+    background-color: @activeColor;
+
   }
 
 }
@@ -101,7 +104,7 @@
   text-shadow: 0 0 5px #444;
 }
 
-#stones{
+#stones {
   position: absolute;
   top: 0;
   left: 0;
