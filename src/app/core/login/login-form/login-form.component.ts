@@ -11,8 +11,7 @@ interface User {
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.less'],
-  animations: [loginForm],
-  providers: [NotyService]
+  animations: [loginForm]
 })
 
 export class LoginFormComponent implements OnInit {

@@ -5,9 +5,11 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {TranslateModule} from '@ngx-translate/core';
-import {NotyService} from '../service/noty/noty.service';
 import {MaterialModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
+
+import {NotyService} from '../service/noty/noty.service';
+import {HttpService} from '../service/http/http.service';
 
 @NgModule({
   declarations: [],
@@ -19,7 +21,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     FlexLayoutModule,
     FormsModule
   ],
-  providers: [NotyService]
+  providers: [NotyService, HttpService]
 })
 
 export class SharedModule {
