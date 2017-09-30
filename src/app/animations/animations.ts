@@ -1,4 +1,4 @@
-import {trigger, animate, transition, style, state, query, group} from '@angular/animations';
+import {trigger, animate, transition, style, state, group} from '@angular/animations';
 import {AnimationEntryMetadata} from '@angular/core';
 
 export const routeAnimation: AnimationEntryMetadata = trigger('routeAnimation', [
@@ -22,7 +22,7 @@ export const routeAnimation: AnimationEntryMetadata = trigger('routeAnimation', 
     ])
   ]);
 
-export const homeInit: AnimationEntryMetadata = trigger('flyInOut', [
+export const homeInit = trigger('flyInOut', [
   state('in', style({transform: 'translateX(0)'})),
   transition('void => *', [
     style({opacity: 0, transform: 'translateX(-100%)'}),
@@ -30,7 +30,7 @@ export const homeInit: AnimationEntryMetadata = trigger('flyInOut', [
   ]),
 ]);
 
-export const loginForm: AnimationEntryMetadata =  trigger('flyInOut', [
+export const loginForm =  trigger('flyInOut', [
   state('in', style({width: 400, transform: 'translateX(0)', opacity: 1})),
   transition('void => *', [
     style({width: 10, transform: 'translateX(100px)', opacity: 0}),
