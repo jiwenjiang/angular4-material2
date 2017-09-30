@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {HttpService} from '../../service/http/http.service';
 
 @Component({
   selector: 'app-stones-cards',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StonesCardsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpService) {
+  }
 
   ngOnInit() {
+    this.http.get('http://rapapi.org/mockjs/26550/card-list', '', (data) => {
+      console.log(data);
+    }, '');
   }
 
 }
