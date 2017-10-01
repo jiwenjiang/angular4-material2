@@ -2,6 +2,7 @@
   "name": "ng4",
   "version": "0.0.0",
   "license": "MIT",
+  "author": "j_bleach",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

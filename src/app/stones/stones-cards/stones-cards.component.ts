@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../../service/http/http.service';
+import url from '../../config/ip/stones';
 
 @Component({
   selector: 'app-stones-cards',
@@ -12,7 +13,7 @@ export class StonesCardsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get('http://rapapi.org/mockjs/26550/card-list', '', (data) => {
+    this.http.get(url.cardList, '', (data) => {
       console.log(data);
     }, '');
   }
