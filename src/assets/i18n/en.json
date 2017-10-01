@@ -4,7 +4,9 @@
   "password": "password",
   "404": "404.not found Page",
   "stones": {
-    "working": "working"
+    "working": "working",
+    "Wild": "Wild Mode",
+    "Standard": "Standard Mode"
   },
   "chinese": "chinese",
   "english": "english"

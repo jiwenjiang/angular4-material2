@@ -4,7 +4,9 @@
   "password": "密码",
   "404": "你的页面飞走了~",
   "stones": {
-    "working": "拼命开发中~"
+    "working": "拼命开发中~",
+    "Wild": "狂野模式",
+    "Standard": "标准模式"
   },
   "chinese": "中文",
   "english": "英文"
