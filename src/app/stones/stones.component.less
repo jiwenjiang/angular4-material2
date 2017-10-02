@@ -1,5 +1,5 @@
 @bgcolor: rgba(0, 17, 27, 1);
-@activeColor:rgb(0, 90, 171);
+@activeColor: rgb(0, 90, 171);
 
 .stones-container {
   width: 100%;
@@ -15,9 +15,13 @@
   position: relative;
   background: url('../../assets/img/bgimg.jpg') no-repeat 50% 0 fixed;
   background-size: cover;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: block;
 }
 
 .sidenav-container {
+  height: 100%;
   padding-top: 2em;
   position: relative;
   display: block;
