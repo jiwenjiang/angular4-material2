@@ -1,0 +1,10 @@
+//padding 5,10,15,20
+.generate-padding(4);
+.generate-padding(@n, @i: 1) when (@i =< @n) {
+  .pd-@{i} {
+    padding: (@i * 5px);
+  }
+  .generate-padding(@n, (@i + 1));
+}
+
+
