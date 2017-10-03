@@ -10,21 +10,24 @@ import {routeAnimation} from '../animations/animations';
 })
 export class StonesComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
-  @HostBinding('style.display')   display = 'block';
-  @HostBinding('style.position')  position = 'absolute';
-  menus: [{ text: string, id: number }];
+  @HostBinding('style.display') display = 'block';
+  @HostBinding('style.position') position = 'absolute';
+  menus: [{ text: string, id: number, icon: string }];
   curItem: number;
 
   constructor() {
     this.menus = [
       {
-        text: '炉石卡组', id: 1
+        text: '炉石卡组', id: 1,
+        icon: 'icon-cards'
       },
       {
-        text: '九大职业', id: 2
+        text: '九大职业', id: 2,
+        icon: 'icon-role'
       },
       {
-        text: '精彩视频', id: 3
+        text: '精彩视频', id: 3,
+        icon: 'icon-video'
       }
     ];
     this.curItem = 0;

@@ -6,15 +6,14 @@
   <md-sidenav #sidenav class="example-sidenav sideNavWidth">
     <ul class="top">
       <!--<li class="nav-active" *ngFor="let v of menus;let i = index;" [class.nav-active]="i==curItem"-->
-          <!--(click)="changeNav(i)">-->
-        <!--{{v.text}}-->
+      <!--(click)="changeNav(i)">-->
+      <!--{{v.text}}-->
       <!--</li>-->
       <md-nav-list>
-        <md-list-item *ngFor="let link of menus;let i = index;" [class.nav-active]="i==curItem" (click)="changeNav(i)">
-          <a mdLine >{{ link.text }}</a>
-          <!--<button md-icon-button >-->
-            <!--<md-icon>info</md-icon>-->
-          <!--</button>-->
+        <md-list-item *ngFor="let link of menus;let i = index;"
+                      [class.nav-active]="i==curItem" (click)="changeNav(i)">
+
+          <a mdLine> <i class="icon {{link.icon}}"></i>&nbsp;{{ link.text }}</a>
         </md-list-item>
       </md-nav-list>
     </ul>
