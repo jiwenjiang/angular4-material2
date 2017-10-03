@@ -1,90 +1,15 @@
 <md-tab-group class="height100">
   <md-tab label="{{'stones.Standard'|translate}}">
 
-    <div class="pd-1" fxLayout="row " fxLayoutWrap fxLayout.xs="column" fxLayoutAlign="center">
+    <div class="pd-1" fxLayout="row" fxLayoutWrap fxLayout.xs="column" fxLayoutAlign="center">
 
-      <div class="example-2 card" fxFlex="30">
-        <div class="wrapper">
-          <div class="header">
-            <div class="date">
-              <span class="day">12</span>
-              <span class="month">Aug</span>
-              <span class="year">2016</span>
-            </div>
-            <ul class="menu-content">
-              <li>
-                <a href="#" class="fa fa-bookmark-o"></a>
-              </li>
-              <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
-              <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
-            </ul>
-          </div>
-          <div class="data">
-            <div class="content">
-              <span class="author">Jane Doe</span>
-              <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
-              <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive
-                soundtrack, out today.</p>
-              <a href="#" class="button">Read more</a>
-            </div>
-          </div>
-        </div>
+        <!--<app-cards style="width: 100%"></app-cards>-->
+
+      <div fxFlex.xs="100" fxFlex.sm="33" fxFlex.md="25" fxFlex.xl="20"
+           *ngFor="let link of [1,2,3,4,5];">
+        <app-cards></app-cards>
       </div>
-      <div class="example-2 card" fxFlex="30">
-        <div class="wrapper" style="background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center/cover no-repeat;
-">
-          <div class="header">
-            <div class="date">
-              <span class="day">12</span>
-              <span class="month">Aug</span>
-              <span class="year">2016</span>
-            </div>
-            <ul class="menu-content">
-              <li>
-                <a class="fa fa-bookmark-o"></a>
-              </li>
-              <li><a class="fa fa-heart-o"><span>18</span></a></li>
-              <li><a class="fa fa-comment-o"><span>3</span></a></li>
-            </ul>
-          </div>
-          <div class="data">
-            <!--<div class="content">-->
-              <!--<span class="author">Jane Doe</span>-->
-              <!--<h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>-->
-              <!--<p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive-->
-                <!--soundtrack, out today.</p>-->
-              <!--<a href="#" class="button">Read more</a>-->
-            <!--</div>-->
-          </div>
-        </div>
-      </div>
-      <!--<div class="example-2 card" fxFlex="30">-->
-      <!--<div class="wrapper">-->
-      <!--<div class="header">-->
-      <!--<div class="date">-->
-      <!--<span class="day">12</span>-->
-      <!--<span class="month">Aug</span>-->
-      <!--<span class="year">2016</span>-->
-      <!--</div>-->
-      <!--<ul class="menu-content">-->
-      <!--<li>-->
-      <!--<a href="#" class="fa fa-bookmark-o"></a>-->
-      <!--</li>-->
-      <!--<li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>-->
-      <!--<li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>-->
-      <!--</ul>-->
-      <!--</div>-->
-      <!--<div class="data">-->
-      <!--<div class="content">-->
-      <!--<span class="author">Jane Doe</span>-->
-      <!--<h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>-->
-      <!--<p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive-->
-      <!--soundtrack, out today.</p>-->
-      <!--<a href="#" class="button">Read more</a>-->
-      <!--</div>-->
-      <!--</div>-->
-      <!--</div>-->
-      <!--</div>-->
+
       <!--<div style="background-color: #031D2E;height: 300px" fxFlex="30"></div>-->
       <!--<div style="background-color: #031D2E;height: 300px" fxFlex="30"></div>-->
       <!--<div style="background-color: #031D2E;height: 300px" fxFlex="30"></div>-->

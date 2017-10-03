@@ -14,6 +14,8 @@ import {NotFoundComponent} from './core/not-found/not-found.component';
 import {LoginFormComponent} from './core/login/login-form/login-form.component';
 import 'hammerjs';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

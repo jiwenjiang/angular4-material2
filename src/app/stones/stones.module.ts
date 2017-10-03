@@ -5,7 +5,8 @@ import {StonesComponent} from './stones.component';
 import {StonesTopComponent} from './stones-top/stones-top.component';
 import {SharedModule} from '../shared/shared.module';
 import {StonesCardsComponent} from './stones-cards/stones-cards.component';
-import { StonesRolesComponent } from './stones-roles/stones-roles.component';
+import {StonesRolesComponent} from './stones-roles/stones-roles.component';
+import {CardsComponent} from '../components/cards/cards.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { StonesRolesComponent } from './stones-roles/stones-roles.component';
     StonesComponent,
     StonesTopComponent,
     StonesCardsComponent,
-    StonesRolesComponent
+    StonesRolesComponent,
+    CardsComponent
   ],
   entryComponents: [
     StonesComponent

@@ -19,6 +19,10 @@ export class LoginComponent implements OnInit {
     canvas();
   }
 
+  swipe() {
+    console.log(666);
+  }
+
   showLogin() {
     this.toLogin = false;
   }

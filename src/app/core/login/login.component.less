@@ -1,10 +1,12 @@
 /* Header */
-.container{
+.container {
   height: 100%;
 }
-.content{
+
+.content {
   height: 100%;
 }
+
 .large-header {
   position: relative;
   width: 100%;
@@ -21,8 +23,6 @@
   background-position: center bottom;
 }
 
-
-
 .main-title {
   position: absolute;
   margin: 0;
@@ -31,16 +31,15 @@
   text-align: center;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate3d(-50%,-50%,0);
-  transform: translate3d(-50%,-50%,0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
 }
-
 
 .main-title {
   font-family: 'Clicker Script', cursive;
   font-weight: normal;
   font-size: 8em;
-  padding-left: 10px;
+  //padding-left: 10px;
   //text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
@@ -57,98 +56,107 @@
   left: 50%;
   border-radius: 50%;
   z-index: -1;
-  -webkit-transform: translate3d(-50%,-50%,0);
-  transform: translate3d(-50%,-50%,0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
 }
-
 
 .main-title .thin {
   font-weight: 200;
 }
 
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width: 768px) {
   .main-title {
     font-size: 4em;
-    img{
+    img {
       width: 120px;
       height: 120px;
-      margin-left:25px!important;
+      margin-left: 25px !important;
     }
   }
 }
 
 .demo-3 {
-  position:relative;
-  width:200px;
-  height:160px;
-  overflow:hidden;
-  float:left;
+  position: relative;
+  width: 250px;
+  height: 160px;
+  overflow: hidden;
+  float: left;
 }
+
 .demo-3 figure {
-  margin:0;
-  padding:0;
-  position:relative;
-  cursor:pointer;
-  margin-left:0px
+  margin: 0;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+  margin-left: 0px
 }
+
 .demo-3 figure img {
-  display:block;
-  position:relative;
-  z-index:10;
-  margin:-5px 0
+  display: block;
+  position: relative;
+  z-index: 10;
+  margin: -5px 0;
+  left: 39px;
 }
+
 .demo-3 figure figcaption {
-  display:block;
-  position:absolute;
-  z-index:5;
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box
+  display: block;
+  position: absolute;
+  z-index: 5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
 }
+
 .demo-3 figure h2 {
-  font-family:'Lato';
-  color:#fff;
-  font-size:16px;
-  text-align:left
+  font-family: 'Lato';
+  color: #fff;
+  font-size: 16px;
+  text-align: left
 }
+
 .demo-3 figure p {
-  display:block;
-  font-family:'Lato';
-  font-size:12px;
-  line-height:18px;
-  margin:15px 0;
-  color:#fff;
-  text-align:left
+  display: block;
+  font-family: 'Lato';
+  font-size: 12px;
+  line-height: 18px;
+  margin: 15px 0;
+  color: #fff;
+  text-align: left
 }
+
 .demo-3 figure figcaption {
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  padding:20px 20px;
-  background-color:rgba(26,76,110,0.5);
-  text-align:center;
-  backface-visibility:hidden;
-  -webkit-transform:rotateY(-180deg);
-  -moz-transform:rotateY(-180deg);
-  transform:rotateY(-180deg);
-  -webkit-transition:all .5s;
-  -moz-transition:all .5s;
-  transition:all .5s
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+  background-color: rgba(26, 76, 110, 0.5);
+  text-align: center;
+  backface-visibility: hidden;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s
 }
+
 .demo-3 figure img {
-  backface-visibility:hidden;
-  -webkit-transition:all .5s;
-  -moz-transition:all .5s;
-  transition:all .5s
+  backface-visibility: hidden;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s
 }
-.demo-3 figure:hover img,figure.hover img {
-  -webkit-transform:rotateY(180deg);
-  -moz-transform:rotateY(180deg);
-  transform:rotateY(180deg)
+
+.demo-3 figure:hover img, figure.hover img {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg)
 }
-.demo-3 figure:hover figcaption,figure.hover figcaption {
-  -webkit-transform:rotateY(0);
-  -moz-transform:rotateY(0);
-  transform:rotateY(0)
+
+.demo-3 figure:hover figcaption, figure.hover figcaption {
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  transform: rotateY(0)
 }
