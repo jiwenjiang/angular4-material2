@@ -3,6 +3,7 @@ import {canvas} from './loginCanvas.server.js';
 import {homeInit} from '../../animations/animations';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.less'],
@@ -17,10 +18,6 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.toLogin = true;
     canvas();
-  }
-
-  swipe() {
-    console.log(666);
   }
 
   showLogin() {
