@@ -8,6 +8,11 @@
     "Wild": "Wild Mode",
     "Standard": "Standard Mode"
   },
+  "menus": {
+    "cards": "Stones Cards",
+    "roles": "Stones Roles",
+    "video":"Stones Video"
+  },
   "chinese": "chinese",
   "english": "english"
 }

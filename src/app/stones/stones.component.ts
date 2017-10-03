@@ -1,6 +1,7 @@
 import {Component, OnInit, HostBinding} from '@angular/core';
 // import {ActivatedRoute} from '@angular/router';
 import {routeAnimation} from '../animations/animations';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-stones',
@@ -12,29 +13,46 @@ export class StonesComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
   @HostBinding('style.display') display = 'block';
   @HostBinding('style.position') position = 'absolute';
-  menus: [{ text: string, id: number, icon: string }];
+  menus: [{ text: any, id: number, icon: string }];
   curItem: number;
 
-  constructor() {
-    this.menus = [
-      {
-        text: '炉石卡组', id: 1,
-        icon: 'icon-cards'
-      },
-      {
-        text: '九大职业', id: 2,
-        icon: 'icon-role'
-      },
-      {
-        text: '精彩视频', id: 3,
-        icon: 'icon-video'
-      }
-    ];
+  constructor(private translate: TranslateService) {
     this.curItem = 0;
   }
 
   ngOnInit() {
     console.log('进入stones');
+    this.setMenus();
+  }
+
+  setMenus() {
+    this.menus = [
+      {
+        text: this.transFn('menus.cards'), id: 1,
+        icon: 'icon-cards'
+      },
+      {
+        text: this.transFn('menus.roles'), id: 2,
+        icon: 'icon-role'
+      },
+      {
+        text: this.transFn('menus.video'), id: 3,
+        icon: 'icon-video'
+      }
+    ];
+    console.log(this.menus);
+  }
+
+  transFn(v) {
+    let text = '';
+    this.translate.get(v).subscribe((res: string) => {
+      text = res;
+    });
+    return text;
+  }
+
+  resetLang() {
+    this.setMenus();
   }
 
   changeNav(i) {

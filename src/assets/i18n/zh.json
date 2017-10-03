@@ -8,6 +8,11 @@
     "Wild": "狂野模式",
     "Standard": "标准模式"
   },
+  "menus": {
+    "cards": "炉石卡组",
+    "roles": "九大职业",
+    "video":"精彩视频"
+  },
   "chinese": "中文",
   "english": "英文"
 }

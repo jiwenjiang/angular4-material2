@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, OnDestroy} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter, OnDestroy} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {ISubscription} from 'rxjs/Subscription';
 
@@ -10,6 +10,7 @@ import {ISubscription} from 'rxjs/Subscription';
 export class StonesTopComponent implements OnInit, OnDestroy {
 
   @Input() sidenav;
+  @Output() change = new EventEmitter();
   username: string;
   langImg: any;
   private subscription;
@@ -37,6 +38,7 @@ export class StonesTopComponent implements OnInit, OnDestroy {
   changeLang(lang) {
     this.subscription = this.translate.use(lang).subscribe(() => {
       this.chooseLang(lang);
+      this.change.emit();
     });
   }
 
