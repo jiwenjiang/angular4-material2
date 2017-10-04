@@ -1,21 +1,11 @@
 <md-tab-group class="height100">
   <md-tab label="{{'stones.Standard'|translate}}">
 
-    <div class="pd-1" fxLayout="row" fxLayoutWrap fxLayout.xs="column" fxLayoutAlign="center">
-
-        <!--<app-cards style="width: 100%"></app-cards>-->
-
-      <div fxFlex.xs="100" fxFlex.sm="33" fxFlex.md="25" fxFlex.xl="20"
+    <div class="pd-1" fxLayout="row" fxLayoutWrap fxLayoutAlign="left" [@httpState]="standard">
+      <div fxFlex.sm="33%" fxFlex.md="25%" fxFlex.xl="20%" fxFlex.xs="100%"
            *ngFor="let link of [1,2,3,4,5];">
         <app-cards></app-cards>
       </div>
-
-      <!--<div style="background-color: #031D2E;height: 300px" fxFlex="30"></div>-->
-      <!--<div style="background-color: #031D2E;height: 300px" fxFlex="30"></div>-->
-      <!--<div style="background-color: #031D2E;height: 300px" fxFlex="30"></div>-->
-      <!--<div style="background-color: #031D2E;height: 300px" fxFlex="33"></div>-->
-
-      <!--<div style="height: 700px"></div>-->
     </div>
 
   </md-tab>
