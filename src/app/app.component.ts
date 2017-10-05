@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   showLoading$: Observable<boolean>;
 
   constructor(public translateService: TranslateService, private store: Store<reducer.State>) {
+    this.showLoading$ = this.store.select('loading');
   }
 
   ngOnInit() {
@@ -26,9 +27,5 @@ export class AppComponent implements OnInit {
     const browserLang = this.translateService.getBrowserLang();
     this.translateService.use(browserLang.match(/zh|en/) ? browserLang : 'zh');
     // ngrx loading
-    this.showLoading$ = this.store.select('loading');
-    setTimeout(() => {
-      console.log(this.showLoading$);
-    }, 2000);
   }
 }

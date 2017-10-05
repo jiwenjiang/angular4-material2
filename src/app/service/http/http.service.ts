@@ -23,7 +23,7 @@ export class HttpService {
     if (this.httpNum === 0) {
       setTimeout(() => {
         this.store.dispatch(new layout.HideAction());
-      }, 2000);
+      }, 1000);
     }
     if (data[0].resCode === 0) {
       cb(data[0].resData);
