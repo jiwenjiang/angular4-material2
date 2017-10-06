@@ -3,7 +3,6 @@
  */
 import * as load from '../../action/loading';
 
-
 const initialState = false;
 
 export function reducer(state: boolean = initialState, action: load.Actions) {

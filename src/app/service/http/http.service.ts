@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Store} from '@ngrx/store';
 import * as reducer from '../../ngrx/reducer';
-import * as layout from '../../ngrx/action/loading';
+import * as load from '../../ngrx/action/loading';
 
 
 @Injectable()
@@ -15,18 +15,18 @@ export class HttpService {
 
   private count(v?: boolean) {
     this.httpNum = v ? this.httpNum + 1 : this.httpNum;
-    this.store.dispatch(new layout.ShowAction());
+    this.store.dispatch(new load.ShowAction());
   }
 
   public format(data, cb, v?: boolean) {
     this.httpNum = v ? this.httpNum - 1 : this.httpNum;
     if (this.httpNum === 0) {
       setTimeout(() => {
-        this.store.dispatch(new layout.HideAction());
+        this.store.dispatch(new load.HideAction());
       }, 1000);
     }
-    if (data[0].resCode === 0) {
-      cb(data[0].resData);
+    if (data && data.resCode === 0) {
+      cb(data.resData);
     }
   }
 

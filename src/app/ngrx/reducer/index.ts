@@ -1,8 +1,8 @@
 /**
  * Created by j_bleach on 2017/10/4.
  */
-import {compose} from '@ngrx/core/compose';
-import {ActionReducer, combineReducers} from '@ngrx/store';
+// import {compose} from '@ngrx/core/compose';
+// import {ActionReducer, combineReducers} from '@ngrx/store';
 import * as loading from './loading';
 
 export interface State {
@@ -23,7 +23,4 @@ export const reducer = {
 //   }
 // }
 
-// loading
-// export const getLayoutState = (state: State) => state.layout;
-//
-// export const getShowSidenav = createSelector(getLayoutState, fromLayout.getShowSidenav);
+

@@ -11,9 +11,9 @@ import {easeIn} from '../../animations/animations';
 })
 export class StonesCardsComponent implements OnInit {
   standard: string;
+  data: {}[];
 
   constructor(private http: HttpService) {
-    console.log(233);
     this.standard = 'pending';
   }
 
@@ -23,6 +23,7 @@ export class StonesCardsComponent implements OnInit {
         this.standard = 'full';
       }, 500);
       console.log(data);
+      this.data = data;
     }, '');
   }
 

@@ -1,26 +1,25 @@
+<!--style="background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center/cover no-repeat;"-->
 <div class="example-2 card">
-  <div class="wrapper" style="background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center/cover no-repeat;">
+  <div class="wrapper" [ngStyle]="{'background':data.url}">
     <div class="header">
       <div class="date">
-        <span class="day">2017.10.03</span>
+        <span class="day">{{data.date}}</span>
       </div>
       <ul class="menu-content">
         <li><a class="icon icon-share"></a></li>
-        <li><a class="icon" [class.icon-like]="true"><span>18</span></a></li>
-        <li><a class="icon" [class.icon-comment]="true"><span>3</span></a></li>
+        <li><a class="icon" [class.icon-like]="true"><span>{{data.like}}</span></a></li>
+        <li><a class="icon" [class.icon-comment]="true"><span>{{data.comment}}</span></a></li>
       </ul>
     </div>
     <div class="data">
       <div class="content">
-        <p class="title">手牌术</p>
-        <p class="text">The antsy bingers of Netflix will
-          eagerly anticipate the digital release of the Survive
-          soundtrack, out today.</p>
-        <div class="show" >
+        <p class="title">{{data.name}}</p>
+        <p class="text">{{data.desc}}</p>
+        <div class="show">
           <div fxLayout="row" fxLayoutAlign="left" fxLayoutWrap>
-            <i class="icon icon-role blue" fxFlex="33">shark</i>
-            <i class="icon icon-type red" fxFlex="38">controll</i>
-            <i class="icon icon-count yellow" fxFlex="25">6532</i>
+            <i class="icon icon-role blue" fxFlex="33">{{data.role}}</i>
+            <i class="icon icon-type red" fxFlex="38">{{data.type}}</i>
+            <i class="icon icon-count yellow" fxFlex="25">{{data.count}}</i>
           </div>
         </div>
         <div class="btn">

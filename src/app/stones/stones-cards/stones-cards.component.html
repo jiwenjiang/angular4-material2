@@ -1,10 +1,10 @@
 <md-tab-group class="height100">
   <md-tab label="{{'stones.Standard'|translate}}">
 
-    <div class="pd-1" fxLayout="row" fxLayoutWrap fxLayoutAlign="left" [@httpState]="standard">
-      <div fxFlex.sm="33%" fxFlex.md="25%" fxFlex.xl="20%" fxFlex.xs="100%"
-           *ngFor="let link of [1,2,3,4,5];">
-        <app-cards></app-cards>
+    <div class="pd-1 mgbottom" fxLayout="row" fxLayoutWrap fxLayoutAlign="left" [@httpState]="standard">
+      <div fxFlex.sm="33%" fxFlex.md="25%" fxFlex.xl="20%" fxFlex.xs="100%" fxFlex.lg="20%"
+           *ngFor="let v of data">
+        <app-cards [data]="v"></app-cards>
       </div>
     </div>
 
