@@ -1,16 +1,21 @@
-<md-tab-group class="height100">
+<md-tab-group class="height100" [(selectedIndex)]="selectedTab" (selectChange)="selectChange()">
   <md-tab label="{{'stones.Standard'|translate}}">
 
     <div class="pd-1 mgbottom" fxLayout="row" fxLayoutWrap fxLayoutAlign="left" [@httpState]="standard">
       <div fxFlex.sm="33%" fxFlex.md="25%" fxFlex.xl="20%" fxFlex.xs="100%" fxFlex.lg="20%"
            *ngFor="let v of data">
-        <app-cards [data]="v"></app-cards>
+        <app-cards [data]="v" ></app-cards>
       </div>
     </div>
 
   </md-tab>
   <md-tab label="{{'stones.Wild'|translate}}">
-    <div style="height: 600px"></div>
+    <div class="pd-1 mgbottom" fxLayout="row" fxLayoutWrap fxLayoutAlign="left" [@httpState]="wild">
+      <div fxFlex.sm="33%" fxFlex.md="25%" fxFlex.xl="20%" fxFlex.xs="100%" fxFlex.lg="20%"
+           *ngFor="let v of wildData">
+        <app-cards [data]="v" id="2"></app-cards>
+      </div>
+    </div>
   </md-tab>
 </md-tab-group>
 

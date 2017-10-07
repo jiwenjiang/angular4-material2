@@ -74,7 +74,7 @@ export const cards = {
       'like': '13',
       'name': 'Mogu shan Warden',
       'role': 'master',
-      'type': 'controller',
+      'type': 'wild',
       'url': 'https://cdnb.artstation.com/p/assets/images/images/000/325/943/large/laurel-d-austin-goblinsvgnomes.jpg?1443928784'
     },
     {
@@ -86,7 +86,7 @@ export const cards = {
       'like': '14',
       'name': 'Liadrin',
       'role': 'master',
-      'type': 'controller',
+      'type': 'wild',
       'url': 'http://www.ooqiu.com/uploads/allimg/150621/96-1506211025140-L.jpg'
     }
   ]

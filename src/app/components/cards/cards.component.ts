@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, OnChanges} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
@@ -6,7 +6,7 @@ import {DomSanitizer} from '@angular/platform-browser';
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.less']
 })
-export class CardsComponent implements OnInit {
+export class CardsComponent implements OnInit, OnChanges {
   @Input() data;
   url: any;
 
@@ -14,9 +14,13 @@ export class CardsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.url = this.sanitization.bypassSecurityTrustStyle(`url(${this.data.url}) center/cover no-repeat`);
+    this.url = this.sanitization.bypassSecurityTrustUrl(`url(${this.data.url})`);
     this.data.url = this.url.changingThisBreaksApplicationSecurity;
-    console.log(this.data.url);
+    // console.log(666);
+  }
+
+  ngOnChanges() {
+    // console.log(777);
   }
 
 }
