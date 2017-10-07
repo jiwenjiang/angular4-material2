@@ -58,8 +58,8 @@ angular4+material2+ngrx
 
 ## 项目相关参考
 
-ngrx:http://blog.csdn.net/j_bleach/article/details/78161765
-router:http://blog.csdn.net/j_bleach/article/details/78077844
+ngrx:http://blog.csdn.net/j_bleach/article/details/78161765 \n
+router:http://blog.csdn.net/j_bleach/article/details/78077844 \n
 
 
 
