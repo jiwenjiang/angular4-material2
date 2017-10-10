@@ -18,7 +18,6 @@ import {HttpService} from '../service/http/http.service';
     CommonModule,
     MaterialModule,
     TranslateModule,
-    MaterialModule,
     FlexLayoutModule,
     FormsModule
   ],
