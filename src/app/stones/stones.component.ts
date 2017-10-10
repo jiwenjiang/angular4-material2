@@ -32,19 +32,19 @@ export class StonesComponent implements OnInit {
         text: this.transFn('menus.cards'),
         id: 1,
         icon: 'icon-cards',
-        link: ''
+        link: '/stones'
       },
       {
         text: this.transFn('menus.roles'),
         id: 2,
         icon: 'icon-role',
-        link: '/roles'
+        link: '/stones/roles'
       },
       {
         text: this.transFn('menus.video'),
         id: 3,
         icon: 'icon-video',
-        link: '/404'
+        link: '/stones/404'
       }
     ];
     console.log(this.menus);
