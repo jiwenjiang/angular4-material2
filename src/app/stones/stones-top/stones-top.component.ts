@@ -43,7 +43,10 @@ export class StonesTopComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    if (this.subscription) {
+      console.log(this.subscription);
+      this.subscription.unsubscribe();
+    }
   }
 
 }
