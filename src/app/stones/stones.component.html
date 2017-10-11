@@ -13,7 +13,6 @@
       <md-nav-list>
         <md-list-item *ngFor="let link of menus;let i = index;" routerLink="{{link.link}}"
                       [class.nav-active]="i==curItem" (click)="changeNav(i)">
-
           <a mdLine> <i class="icon {{link.icon}}"></i>&nbsp;{{ link.text }}</a>
         </md-list-item>
       </md-nav-list>
