@@ -5,22 +5,21 @@ header {
   width: 100%;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
   nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     padding: 8px 16px;
     color: white;
     height: 2.6em;
     background: @bgcolor;
     font-size: 1em;
+    vertical-align: middle;
     position: relative;
-    .container {
-      width: 100%;
+    .toggle{
+      float: left;
+      line-height: 2.6em;
     }
     .fr {
-      position: absolute;
-      right: 15px;
-      display: inline-block;
+      float: right;
+      line-height: 2.6em;
+      margin: -3px;
       img {
         width: 2em;
         height: 2em;
