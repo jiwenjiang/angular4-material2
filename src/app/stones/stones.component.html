@@ -1,15 +1,12 @@
 <app-stones-top [sidenav]="sidenav" (change)="resetLang()"></app-stones-top>
+
 <div class="ribbon">
   <a href="https://github.com/jiwenjiang/ng4-material2" target="_blank">Fork me on GitHub</a>
-  <!--<a (click)="check()">Fork me on GitHub</a>-->
 </div>
+
 <md-sidenav-container class="stones-container">
   <md-sidenav #sidenav class="example-sidenav sideNavWidth">
     <ul class="top">
-      <!--<li class="nav-active" *ngFor="let v of menus;let i = index;" [class.nav-active]="i==curItem"-->
-      <!--(click)="changeNav(i)">-->
-      <!--{{v.text}}-->
-      <!--</li>-->
       <md-nav-list>
         <md-list-item *ngFor="let link of menus;let i = index;" routerLink="{{link.link}}"
                       [class.nav-active]="i==curItem" (click)="changeNav(i)">

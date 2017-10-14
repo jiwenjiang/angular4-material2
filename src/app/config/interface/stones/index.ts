@@ -3,12 +3,13 @@
  */
 
 export interface CardModel {
-  comment: string;
+  comment: number;
   count: string;
   date: string;
   desc: string;
-  id: string;
-  like: string;
+  id: number;
+  haslike: boolean;
+  like: number;
   name: string;
   role: string;
   type: string;

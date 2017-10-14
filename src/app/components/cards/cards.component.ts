@@ -23,4 +23,9 @@ export class CardsComponent implements OnInit, OnChanges {
     // console.log(777);
   }
 
+  toggleLike(data) {
+    data.haslike === true
+      ? (data.haslike = false, data.like--)
+      : (data.haslike = true, data.like++);
+  }
 }

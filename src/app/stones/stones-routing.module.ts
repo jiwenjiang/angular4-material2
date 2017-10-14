@@ -4,6 +4,7 @@ import {StonesComponent} from './stones.component';
 import {StonesCardsComponent} from './stones-cards/stones-cards.component';
 import {StonesRolesComponent} from './stones-roles/stones-roles.component';
 
+
 const stonesRoutes: Routes = [
   {
     path: '',
