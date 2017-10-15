@@ -18,6 +18,7 @@ import {LoginFormComponent} from './core/login/login-form/login-form.component';
 import 'hammerjs';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
