@@ -1,9 +1,15 @@
-<div class="clearfix">
-  <h1 class="pull-left" md-dialog-title>{{ config.title || '确认操作' }}</h1>
-  <span class="icon-close-mid pull-right md-dialog-title-close" (click)="mdDialogRef.close(false)"></span>
+<div class="dialog">
+  <h3 md-dialog-title>What about <span class="red">{{data.title}}</span>?</h3>
+  <md-dialog-content>
+    <md-input-container class="width">
+      <textarea matInput placeholder="Commentary" ></textarea>
+    </md-input-container>
+  </md-dialog-content>
+  <md-dialog-actions>
+    <div class="pull-right">
+      <button md-raised-button mat-dialog-close>No</button>
+      <button md-raised-button class="primary-color" (click)="closeDialog()">Yes</button>
+    </div>
+  </md-dialog-actions>
 </div>
-<div md-dialog-content>{{ config.content }}</div>
-<div md-dialog-actions class="confirm-dialog-operate">
-  <button md-raised-button color="primary" (click)="mdDialogRef.close(true)">{{ config.button || '确定' }}</button>
-  <button md-raised-button (click)="mdDialogRef.close(false)" class="confirm-dialog-cancel">取消</button>
-</div>
+

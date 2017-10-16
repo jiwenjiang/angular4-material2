@@ -1,6 +1,8 @@
 import {Component, OnInit, Input, OnChanges} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MdDialog, MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
+import {CardCommentComponent} from '../card-comment/card-comment.component';
+import {NotyService} from '../../service/noty/noty.service';
 
 @Component({
   selector: 'app-cards',
@@ -11,7 +13,7 @@ export class CardsComponent implements OnInit, OnChanges {
   @Input() data;
   url: any;
 
-  constructor(private sanitization: DomSanitizer, public dialog: MdDialog) {
+  constructor(private sanitization: DomSanitizer, public dialog: MdDialog, private noty: NotyService) {
   }
 
   ngOnInit() {
@@ -28,16 +30,22 @@ export class CardsComponent implements OnInit, OnChanges {
       : (data.haslike = true, data.like++);
   }
 
-  openDialog(): void {
-    // const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-    //   width: '250px',
-    //   // data: {name: this.name, animal: this.animal}
-    // });
+  openDialog(v): void {
+    const dialogRef = this.dialog.open(CardCommentComponent, {
+      width: '23em',
+      height: '20em',
+      data: {title: v.name, id: v.id}
+    });
 
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    //   // this.animal = result;
-    // });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
+        v.comment++;
+        this.noty.alert({
+          text: 'Commentary Succ!',
+          type: 'success'
+        });
+      }
+    });
   }
 }
 

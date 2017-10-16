@@ -1,12 +1,28 @@
-.md-dialog-title-close:hover{
-  cursor: pointer;
+.dialog {
+  position: relative;
+  height: 100%;
+  .red {
+    color: #ff4500;
+  }
+  .width{
+    width: 100%;
+    font-size: 1.2em;
+  }
+  .pull-right {
+    position: relative;
+    float: right;
+  }
+  .primary-color {
+    background-color: rgb(0, 90, 171);
+    color: white;
+  }
+
+  md-dialog-actions {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+  }
 }
-.confirm-dialog-operate{
-  margin-bottom: 0;
-  margin-top: 15px;
-  align-items: center;
-  justify-content: center;
-}
-.confirm-dialog-cancel{
-  margin-left: 20px;
-}
+
