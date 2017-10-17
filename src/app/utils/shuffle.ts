@@ -5,7 +5,7 @@ export class Shuffle {
   constructor() {
   }
 
-  shuffle() {
+  shuffle(): number {
     return Math.random() > .5 ? -1 : 1;
   }
 }

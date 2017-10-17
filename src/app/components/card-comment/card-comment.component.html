@@ -1,0 +1,15 @@
+<div class="dialog">
+  <h3 md-dialog-title>What about <span class="red">{{data.title}}</span>?</h3>
+  <md-dialog-content>
+    <md-input-container class="width">
+      <textarea matInput placeholder="Commentary" ></textarea>
+    </md-input-container>
+  </md-dialog-content>
+  <md-dialog-actions>
+    <div class="pull-right">
+      <button md-raised-button mat-dialog-close>No</button>
+      <button md-raised-button class="primary-color" (click)="closeDialog()">Yes</button>
+    </div>
+  </md-dialog-actions>
+</div>
+

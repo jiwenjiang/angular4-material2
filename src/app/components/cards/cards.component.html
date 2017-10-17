@@ -7,8 +7,13 @@
       </div>
       <ul class="menu-content">
         <li><a class="icon icon-share"></a></li>
-        <li><a class="icon" [class.icon-like]="true"><span>{{data.like}}</span></a></li>
-        <li><a class="icon" [class.icon-comment]="true"><span>{{data.comment}}</span></a></li>
+        <li >
+          <a class="icon hand" [ngStyle]="{'color': data.haslike?'red':'white'}" (click)="toggleLike(data)"
+             [ngClass]="{'icon-like':!data.haslike,'icon-like_fill':data.haslike}">
+            <span>{{data.like}}</span>
+          </a>
+        </li>
+        <li><a class="icon hand" [class.icon-comment]="true" (click)="openDialog(data)"><span>{{data.comment}}</span></a></li>
       </ul>
     </div>
     <div class="data">
