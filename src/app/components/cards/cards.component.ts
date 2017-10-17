@@ -1,6 +1,6 @@
-import {Component, OnInit, Input, OnChanges} from '@angular/core';
+import {Component, OnInit, Input, ChangeDetectorRef} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
-import {MdDialog, MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
+import {MdDialog} from '@angular/material';
 import {CardCommentComponent} from '../card-comment/card-comment.component';
 import {NotyService} from '../../service/noty/noty.service';
 
@@ -9,11 +9,11 @@ import {NotyService} from '../../service/noty/noty.service';
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.less']
 })
-export class CardsComponent implements OnInit, OnChanges {
+export class CardsComponent implements OnInit {
   @Input() data;
   url: any;
 
-  constructor(private sanitization: DomSanitizer, public dialog: MdDialog, private noty: NotyService) {
+  constructor(private sanitization: DomSanitizer, public dialog: MdDialog, private noty: NotyService, private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit() {
@@ -21,8 +21,6 @@ export class CardsComponent implements OnInit, OnChanges {
     this.data.url = this.url.changingThisBreaksApplicationSecurity;
   }
 
-  ngOnChanges() {
-  }
 
   toggleLike(data): void {
     data.haslike === true
@@ -40,11 +38,13 @@ export class CardsComponent implements OnInit, OnChanges {
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
         v.comment++;
+        this.cdr.detectChanges();
         this.noty.alert({
           text: 'Commentary Succ!',
           type: 'success'
         });
       }
+      console.log(v)
     });
   }
 }
