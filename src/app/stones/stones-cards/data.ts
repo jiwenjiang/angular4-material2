@@ -29,7 +29,7 @@ export const cards = {
       'name': 'Tauren Warrior',
       'role': 'Starcraft',
       'type': 'controller',
-      'url': 'https://i.ytimg.com/vi/CCJq7lE3JQs/maxresdefault.jpg'
+      'url': 'http://pic31.photophoto.cn/20140422/0005018397617350_b.jpg'
     },
     {
       'comment': 13,

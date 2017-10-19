@@ -44,7 +44,7 @@ export class CardsComponent implements OnInit {
           type: 'success'
         });
       }
-      console.log(v)
+      console.log(v);
     });
   }
 }
