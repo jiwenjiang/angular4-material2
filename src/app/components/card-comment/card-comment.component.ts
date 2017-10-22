@@ -18,6 +18,7 @@ export class CardCommentComponent implements OnInit {
 
   closeDialog(): void {
     this.mdDialogRef.close(true);
+
   }
 
 }
