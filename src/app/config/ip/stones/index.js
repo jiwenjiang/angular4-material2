@@ -1,8 +1,8 @@
 import {ip} from '../index';
 
 const urls = {
-  cardList: '26550/card-list',
-  wilds: '26550/cards'
+  cardList: '3724/GET/card-list',
+  wilds: '3724/GET/card-list'
 }
 
 for (let attr in urls) {
