@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {canvas} from './loginCanvas.server.js';
-import {homeInit} from '../../animations/animations';
+import {homeInit} from '@animations/animations';
 
 @Component({
   moduleId: module.id,

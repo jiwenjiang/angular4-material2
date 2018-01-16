@@ -8,6 +8,7 @@ import {StonesCardsComponent} from './stones-cards/stones-cards.component';
 import {StonesRolesComponent} from './stones-roles/stones-roles.component';
 import {CardsComponent} from '../components/cards/cards.component';
 import {CardCommentComponent} from '../components/card-comment/card-comment.component';
+import {StonesAboutmeComponent} from './stones-aboutme/stones-aboutme.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import {CardCommentComponent} from '../components/card-comment/card-comment.comp
     StonesCardsComponent,
     StonesRolesComponent,
     CardsComponent,
-    CardCommentComponent
+    CardCommentComponent,
+    StonesAboutmeComponent
   ],
   entryComponents: [
     StonesComponent,

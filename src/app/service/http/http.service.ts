@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Store} from '@ngrx/store';
-import * as reducer from '../../ngrx/reducer';
-import * as load from '../../ngrx/action/loading';
+import * as reducer from '@ngrx/reducer';
+import * as load from '@ngrx/action/loading';
 
 
 @Injectable()

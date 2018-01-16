@@ -11,7 +11,8 @@
   "menus": {
     "cards": "Stones Cards",
     "roles": "Stones Roles",
-    "video":"Stones Video"
+    "video": "Stones Video",
+    "aboutme": "About Me"
   },
   "chinese": "chinese",
   "english": "english"

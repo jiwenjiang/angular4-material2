@@ -1,8 +1,8 @@
 import {Component, OnInit, HostBinding} from '@angular/core';
 // import {ActivatedRoute} from '@angular/router';
-import {routeAnimation} from '../animations/animations';
+import {routeAnimation} from '@animations/animations';
 import {TranslateService} from '@ngx-translate/core';
-import {Menus} from '../config/interface/core';
+import {Menus} from '@config/interface/core';
 
 @Component({
   selector: 'app-stones',
@@ -22,7 +22,6 @@ export class StonesComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('进入stones');
     this.setMenus();
   }
 
@@ -45,9 +44,14 @@ export class StonesComponent implements OnInit {
         id: 3,
         icon: 'icon-video',
         link: '/stones/404'
+      },
+      {
+        text: this.transFn('menus.aboutme'),
+        id: 4,
+        icon: 'icon-video',
+        link: '/stones/aboutme'
       }
     ];
-    console.log(this.menus);
   }
 
   transFn(v) {
@@ -67,7 +71,6 @@ export class StonesComponent implements OnInit {
   }
 
   getState(outlet) {
-    console.log(outlet);
     return outlet.activatedRouteData.state;
   }
 }

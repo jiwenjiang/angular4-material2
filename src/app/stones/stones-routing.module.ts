@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {StonesComponent} from './stones.component';
 import {StonesCardsComponent} from './stones-cards/stones-cards.component';
 import {StonesRolesComponent} from './stones-roles/stones-roles.component';
+import {StonesAboutmeComponent} from './stones-aboutme/stones-aboutme.component';
 
 
 const stonesRoutes: Routes = [
@@ -17,6 +18,10 @@ const stonesRoutes: Routes = [
       {
         path: 'roles',
         component: StonesRolesComponent
+      },
+      {
+        path: 'aboutme',
+        component: StonesAboutmeComponent
       }
     ]
   }

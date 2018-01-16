@@ -1,9 +1,10 @@
-import {Component, OnInit, Input} from '@angular/core';
-import {HttpService} from '../../service/http/http.service';
-import url from '../../config/ip/stones';
-import {easeIn} from '../../animations/animations';
-import {Shuffle} from '../../utils/shuffle';
-import {CardModel} from '../../config/interface/stones';
+import {Component, OnInit} from '@angular/core';
+import {HttpService} from '@service/http/http.service';
+import url from '@config/ip/stones';
+import {easeIn} from '@animations/animations';
+import {Shuffle} from '@utils/shuffle';
+import {CardModel} from '@config/interface/stones';
+// import {cards} from './data';
 
 @Component({
   selector: 'app-stones-cards',
@@ -36,6 +37,11 @@ export class StonesCardsComponent implements OnInit {
       }, 500);
       this.data = data.sort(new Shuffle().shuffle);
     }, '');
+    // setTimeout(() => {
+    //   this.standard = 'full';
+    //   // this.data = cards.resData.sort(new Shuffle().shuffle);
+    //   console.log(cards.resData)
+    // }, 500)
   }
 
   getWilds() {

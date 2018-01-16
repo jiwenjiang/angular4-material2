@@ -11,7 +11,8 @@
   "menus": {
     "cards": "炉石卡组",
     "roles": "九大职业",
-    "video":"精彩视频"
+    "video": "精彩视频",
+    "aboutme": "关于我"
   },
   "chinese": "中文",
   "english": "英文"

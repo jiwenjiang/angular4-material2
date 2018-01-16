@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {NotyService} from '../../../service/noty/noty.service';
+import {NotyService} from '@service/noty/noty.service';
 import {Router} from '@angular/router';
-import {loginForm} from '../../../animations/animations';
+import {loginForm} from '@animations/animations';
 
 interface User {
   name: string;

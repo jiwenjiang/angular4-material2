@@ -17,6 +17,15 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@componets/*":["app/components/*"],
+      "@service/*":["app/service/*"],
+      "@config/*":["app/config/*"],
+      "@utils/*":["app/utils/*"],
+      "@animations/*":["app/animations/*"],
+      "@ngrx/*":["app/ngrx/*"]
+    }
   }
 }
