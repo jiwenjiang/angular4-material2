@@ -1,6 +1,6 @@
 import {Component, OnInit, HostBinding} from '@angular/core';
 // import {ActivatedRoute} from '@angular/router';
-import {routeAnimation} from '@animations/animations';
+import {routeAnimation} from '@myanimations/animations';
 import {TranslateService} from '@ngx-translate/core';
 import {Menus} from '@config/interface/core';
 

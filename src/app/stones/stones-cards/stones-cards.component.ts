@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from '@service/http/http.service';
 import url from '@config/ip/stones';
-import {easeIn} from '@animations/animations';
+import {easeIn} from '@myanimations/animations';
 import {Shuffle} from '@utils/shuffle';
 import {CardModel} from '@config/interface/stones';
 // import {cards} from './data';

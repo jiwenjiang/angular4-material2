@@ -24,7 +24,7 @@
       "@service/*":["app/service/*"],
       "@config/*":["app/config/*"],
       "@utils/*":["app/utils/*"],
-      "@animations/*":["app/animations/*"],
+      "@myanimations/*":["app/animations/*"],
       "@ngrx/*":["app/ngrx/*"],
       "@assets/*":["assets/*"]
     }

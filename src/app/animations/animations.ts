@@ -1,7 +1,7 @@
 import {trigger, animate, transition, style, state, group} from '@angular/animations';
 import {AnimationEntryMetadata} from '@angular/core';
 
-export const routeAnimation: AnimationEntryMetadata = trigger('routeAnimation', [
+const routeAnimation: AnimationEntryMetadata = trigger('routeAnimation', [
   state('*', style({
     // the view covers the whole screen with a semi tranparent background
     opacity: 1,
@@ -22,7 +22,7 @@ export const routeAnimation: AnimationEntryMetadata = trigger('routeAnimation', 
   ])
 ]);
 
-export const homeInit = trigger('flyInOut', [
+const homeInit = trigger('flyInOut', [
   state('in', style({transform: 'translateX(0)'})),
   transition('void => *', [
     style({opacity: 0, transform: 'translateX(-100%)'}),
@@ -30,7 +30,7 @@ export const homeInit = trigger('flyInOut', [
   ]),
 ]);
 
-export const loginForm = trigger('flyInOut', [
+const loginForm = trigger('flyInOut', [
   state('in', style({width: 400, transform: 'translateX(0)', opacity: 1})),
   transition('void => *', [
     style({width: 10, transform: 'translateX(100px)', opacity: 0}),
@@ -57,7 +57,7 @@ export const loginForm = trigger('flyInOut', [
   ])
 ]);
 
-export const easeIn = trigger('httpState', [
+const easeIn = trigger('httpState', [
   state('pending', style({
     opacity: 0
   })),
@@ -67,3 +67,5 @@ export const easeIn = trigger('httpState', [
   transition('pending => full', animate('500ms ease-in')),
   transition('full => pending', animate('500ms ease-out'))
 ]);
+
+export {routeAnimation, homeInit, loginForm, easeIn}
