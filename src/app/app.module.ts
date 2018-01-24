@@ -15,7 +15,6 @@ import {AppComponent} from './app.component';
 import {LoginComponent} from './core/login/login.component';
 import {NotFoundComponent} from './core/not-found/not-found.component';
 import {LoginFormComponent} from './core/login/login-form/login-form.component';
-import {QRCodeComponent} from './components/qr-code/qr-code.component';
 import 'hammerjs';
 
 
@@ -24,8 +23,7 @@ import 'hammerjs';
     AppComponent,
     LoginComponent,
     NotFoundComponent,
-    LoginFormComponent,
-    QRCodeComponent
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,

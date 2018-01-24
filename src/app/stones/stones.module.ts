@@ -8,6 +8,7 @@ import {StonesCardsComponent} from './stones-cards/stones-cards.component';
 import {StonesRolesComponent} from './stones-roles/stones-roles.component';
 import {CardsComponent} from '../components/cards/cards.component';
 import {CardCommentComponent} from '../components/card-comment/card-comment.component';
+import {QRCodeComponent} from '../components/qr-code/qr-code.component';
 import {StonesAboutmeComponent} from './stones-aboutme/stones-aboutme.component';
 
 @NgModule({
@@ -22,11 +23,13 @@ import {StonesAboutmeComponent} from './stones-aboutme/stones-aboutme.component'
     StonesRolesComponent,
     CardsComponent,
     CardCommentComponent,
-    StonesAboutmeComponent
+    StonesAboutmeComponent,
+    QRCodeComponent
   ],
   entryComponents: [
     StonesComponent,
-    CardCommentComponent
+    CardCommentComponent,
+    QRCodeComponent
   ],
   providers: []
 })

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MdDialog} from '@angular/material';
+import {QRCodeComponent} from '@componets/qr-code/qr-code.component';
 
 @Component({
   selector: 'app-stones-aboutme',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StonesAboutmeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MdDialog) {
+  }
 
   ngOnInit() {
   }
 
+  openDialog(v): void {
+    const imgUrl = `../../../assets/img/${v}.jpg`;
+    const dialogRef = this.dialog.open(QRCodeComponent, {
+      width: '20em',
+      height: '23em',
+      data: imgUrl
+    });
+
+    dialogRef.afterClosed().subscribe(result => result);
+  }
 }
