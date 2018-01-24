@@ -94,7 +94,7 @@ export const cards = {
       'name': 'Liadrin',
       'role': 'master',
       'type': 'wild',
-      'url': 'http://www.ooqiu.com/uploads/allimg/150621/96-1506211025140-L.jpg'
+      'url': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516789648585&di=e590c87e7f39c9ca6b0726c5d16d9884&imgtype=0&src=http%3A%2F%2Fimg.news.d.cn%2FUE%2Fnet%2FUEUpload%2F6355546769046837504934593.jpg'
     }
   ]
 };

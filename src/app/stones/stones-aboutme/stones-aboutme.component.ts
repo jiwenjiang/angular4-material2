@@ -22,7 +22,6 @@ export class StonesAboutmeComponent implements OnInit {
       height: '23em',
       data: imgUrl
     });
-
     dialogRef.afterClosed().subscribe(result => result);
   }
 }

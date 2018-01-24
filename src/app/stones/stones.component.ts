@@ -48,7 +48,7 @@ export class StonesComponent implements OnInit {
       {
         text: this.transFn('menus.aboutme'),
         id: 4,
-        icon: 'icon-video',
+        icon: 'icon-aboutme',
         link: '/stones/aboutme'
       }
     ];
