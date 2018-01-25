@@ -15,5 +15,9 @@
     "aboutme": "About Me"
   },
   "chinese": "chinese",
-  "english": "english"
+  "english": "english",
+  "aboutme":{
+    "synopsis": "A front-end wed developer withing deep interests in javaScript.",
+    "motto": "Stay hungry, Stay foolish."
+  }
 }

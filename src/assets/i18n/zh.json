@@ -15,5 +15,9 @@
     "aboutme": " 关 于 我"
   },
   "chinese": "中文",
-  "english": "英文"
+  "english": "英文",
+  "aboutme":{
+    "synopsis": "一个对javaScript饶有兴趣的前端开发",
+    "motto": "求知若饥，虚心若愚"
+  }
 }

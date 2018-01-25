@@ -17,8 +17,8 @@ export class StonesCardsComponent implements OnInit {
   selectedTab: number;
   standard: string;
   wild: string;
-  data: [CardModel];
-  wildData: [CardModel];
+  data: CardModel;
+  wildData: CardModel;
 
   constructor(private http: HttpService) {
     this.standard = 'pending';
@@ -39,8 +39,7 @@ export class StonesCardsComponent implements OnInit {
     }, '');
     // setTimeout(() => {
     //   this.standard = 'full';
-    //   // this.data = cards.resData.sort(new Shuffle().shuffle);
-    //   console.log(cards.resData)
+    //   this.data = cards.resData.sort(new Shuffle().shuffle);
     // }, 500)
   }
 
@@ -52,6 +51,10 @@ export class StonesCardsComponent implements OnInit {
       }, 500);
       this.wildData = data.sort(new Shuffle().shuffle);
     }, '');
+    // setTimeout(() => {
+    //   this.standard = 'full';
+    //   this.wildData = cards.resData.sort(new Shuffle().shuffle);
+    // }, 500)
   }
 
   selectChange() {
@@ -61,7 +64,5 @@ export class StonesCardsComponent implements OnInit {
     if (this.selectedTab === 1) {
       this.getWilds();
     }
-    console.log(this.selectedTab);
   }
-
 }
