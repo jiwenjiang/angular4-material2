@@ -12,7 +12,6 @@ export class CardCommentComponent implements OnInit {
   constructor(public mdDialogRef: MdDialogRef<CardCommentComponent>, @Inject(MD_DIALOG_DATA) data: any) {
     this.data = data;
   }
-
   ngOnInit() {
   }
 
